@@ -14,20 +14,21 @@ M4 Mac / WSL2 上で Docker を使って xv6 をビルド・起動できるよ�
 
 ### ビルド & 起動
 
-\`\`\`bash
-
 # 1. イメージをビルド（初回 5〜10 分）
 
+```bash
 docker build -t xv6-dev .
+```
 
 # 2. xv6 をビルド & QEMU で起動
 
+```bash
 docker run --rm -it -v "$PWD":/work xv6-dev make qemu
-\`\`\`
+```
 
-xv6 のシェル \`$\` が立ち上がれば成功。
+xv6 のシェル `$` が立ち上がれば成功。
 
-\`\`\`text
+```text
 xv6 kernel is booting
 
 hart 1 starting
@@ -35,21 +36,21 @@ hart 2 starting
 init: starting sh
 $ ls
 $ echo hello
-\`\`\`
+```
 
 ### 終了方法
 
-\`\`\`text
+```text
 Ctrl + a を押してから x
-\`\`\`
+```
 
-\`Ctrl + C\` では抜けられないので注意。
+`Ctrl + C` では抜けられないので注意。
 
 ### 2回目以降の起動
 
-\`\`\`bash
+```bash
 docker run --rm -it -v "$PWD":/work xv6-dev make qemu
-\`\`\`
+```
 
 ## なぜ Docker を使うか
 
@@ -58,7 +59,7 @@ docker run --rm -it -v "$PWD":/work xv6-dev make qemu
 
 ## ディレクトリ構成
 
-\`\`\`text
+```text
 learn-xv6-riscv/
 ├── Dockerfile # 学習用の最小ビルド環境
 ├── README.md # このファイル
@@ -67,7 +68,7 @@ learn-xv6-riscv/
 ├── kernel/ # xv6 カーネル
 ├── user/ # ユーザープログラム
 └── ...
-\`\`\`
+```
 
 ## ライセンス
 
