@@ -1,6 +1,6 @@
 # learn-xv6-riscv
 
-[MIT xv6-riscv](https://github.com/mit-pdos/xv6-riscv) を学習目的で fork したリポジトリ。  
+[MIT xv6-riscv](https://github.com/mit-pdos/xv6-riscv) を学習目的で clone したリポジトリ。  
 M4 Mac / WSL2 上で Docker を使って xv6 をビルド・起動できるようにしてある。
 
 > 元の MIT 公式 README は [`README`](./README) を参照（著者・謝辞・原ライセンス）。
